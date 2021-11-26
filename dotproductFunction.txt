@@ -1,0 +1,47 @@
+FUNCTION dotproduct(n:INTEGER;var t1:v1; var t2:v2) : INTEGER
+VAR
+i,j,ps:INTEGER;
+BEGIN
+FOR i FROM 0 TO n-1 STEP 1 DO
+FOR j FROM 0 TO n-1 STEP 1 DO
+ps:=(v1[i]*v2[j])+(v1[i+1]*v2[j+1]);
+END_FOR
+END_FOR
+    RETURN (ps) ;
+END
+
+PROCEDURE dotproduct(n:INTEGER; var t1:v1; var t2:v2)
+VAR
+i,j,ps:INTEGER;
+BEGIN
+FOR i FROM 0 TO n-1 STEP 1 DO
+FOR j FROM 0 TO n-1 STEP 1 DO
+ps:=(v1[i]*v2[j])+(v1[i+1]*v2[j+1]);
+END_FOR
+END_FOR
+END
+
+ALGORITHM dotproductorogram
+VAR
+n,i,j,p:INTEGER;
+v1 :ARRAY_OF type[30];
+v2 :ARRAY_OF type[30];
+BEGIN
+write("give vectors size");
+read(n);
+
+FOR i FROM 0 TO n-1 STEP 1 DO
+write("give various numbers of first vector");
+read(v1[i]);
+END_FOR
+
+FOR i FROM 0 TO n-1 STEP 1 DO
+write("give various numbers of second vector");
+read(v2[j]);
+END_FOR
+
+p:=dotproduct();
+IF (p=0) THEN
+write("the dot product of two vectors are orthogonol",p);
+END_IF
+END
