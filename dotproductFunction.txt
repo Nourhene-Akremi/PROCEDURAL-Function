@@ -1,4 +1,4 @@
-FUNCTION dotproduct(n:INTEGER;var t1:v1; var t2:v2) : INTEGER
+FUNCTION dotproduct(n:INTEGER;var t1:array_of integer; var t2:array_of integer) : INTEGER
 VAR
 i,j,ps:INTEGER;
 BEGIN
