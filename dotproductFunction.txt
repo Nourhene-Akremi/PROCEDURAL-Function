@@ -2,9 +2,10 @@ FUNCTION dotproduct(n:INTEGER;var t1:v1; var t2:v2) : INTEGER
 VAR
 i,j,ps:INTEGER;
 BEGIN
+ps:=0;
 FOR i FROM 0 TO n-1 STEP 1 DO
 FOR j FROM 0 TO n-1 STEP 1 DO
-ps:=(v1[i]*v2[j])+(v1[i+1]*v2[j+1]);
+ps:=ps+v1[i]*v2[j];
 END_FOR
 END_FOR
     RETURN (ps) ;
